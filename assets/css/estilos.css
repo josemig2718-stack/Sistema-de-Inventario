@@ -1,0 +1,351 @@
+/* =========================================================
+   assets/css/estilos.css
+   Diseño global, barra de navegación y dashboard.
+========================================================= */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    background-color: #1e293b;
+    /* Azul oscuro elegante */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-brand span {
+    color: #38bdf8;
+    /* Detalle celeste */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #334155;
+    color: white;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.encabezado-dashboard {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.encabezado-dashboard h1 {
+    color: #0f172a;
+    font-size: 32px;
+}
+
+.encabezado-dashboard p {
+    color: #64748b;
+    margin-top: 8px;
+}
+
+/* --- TARJETAS DEL DASHBOARD --- */
+.grid-estadisticas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    border-top: 4px solid #38bdf8;
+}
+
+.tarjeta h3 {
+    color: #475569;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tarjeta .numero {
+    font-size: 48px;
+    font-weight: bold;
+    color: #0f172a;
+    margin: 15px 0;
+}
+
+.btn-accion {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0284c7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-accion:hover {
+    background-color: #0369a1;
+}
+
+.btn-secundario {
+    background-color: #10b981;
+    /* Verde */
+}
+
+.btn-secundario:hover {
+    background-color: #059669;
+}
+
+
+
+
+
+/* --- FORMULARIOS --- */
+.formulario-caja {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #10b981;
+    /* Verde */
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #475569;
+}
+
+.grupo-input input,
+.grupo-input select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.grupo-input input:focus,
+.grupo-input select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+.grupo-input.doble {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-input.doble div {
+    flex: 1;
+}
+
+
+
+
+
+/* --- TABLAS Y FILTROS --- */
+.caja-filtros fieldset {
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.caja-filtros legend {
+    font-weight: bold;
+    color: #0284c7;
+    padding: 0 10px;
+}
+
+.grid-filtros {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.grid-filtros .grupo-input {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.botones-filtros {
+    display: flex;
+    gap: 10px;
+}
+
+.tabla-contenedor {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-inventario th {
+    background-color: #1e293b;
+    color: white;
+}
+
+.tabla-inventario tr:hover {
+    background-color: #f8fafc;
+}
+
+/* --- ETIQUETAS DE CATEGORÍAS --- */
+.badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Color para Hardware (Tonos Morados/Lilas) */
+.badge-hardware {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
+/* Color para Periféricos (Tonos Azules - El que ya tenías) */
+.badge-perifericos {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Color para Redes (Tonos Verdes) */
+.badge-redes {
+    background-color: #d1fae5;
+    color: #047857;
+}
+
+
+/* Color por defecto (Gris) por si agregas otra categoría luego */
+.badge-default {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btn-eliminar {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-eliminar:hover {
+    text-decoration: underline;
+}
+
+
+
+.btn-editar {
+    color: #f59e0b;
+    /* Color naranja/ámbar */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-editar:hover {
+    text-decoration: underline;
+    color: #d97706;
+}
+
+
+
+
+
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+.footer-principal {
+    background-color: #1e293b;
+    /* El mismo azul oscuro del navbar */
+    color: #cbd5e1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: 4px solid #38bdf8;
+    /* Detalle celeste para combinar */
+}
+
+.contenedor-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.contenedor-footer p:first-child {
+    font-weight: bold;
+    color: white;
+}
+
+/* Magia para ocultar el footer al imprimir el PDF */
+@media print {
+    .footer-principal {
+        display: none;
+    }
+}

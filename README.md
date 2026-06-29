@@ -65,3 +65,5 @@ Sistema_inventario/
 │   └── reporte_inventario.php  # Generador de plantilla para PDF
 ├── conexion.php                # Conector a la base de datos MySQL
 └── index.php                   # Dashboard principal
+
+Estudiantes de Informatica de la Uptp
